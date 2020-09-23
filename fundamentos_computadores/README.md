@@ -1,0 +1,1 @@
+This directory contains exercises, practices and exams of Fundamentos de Computadores corresponding to the first course

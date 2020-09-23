@@ -1,0 +1,1 @@
+This directory contains exercises, practices and exams of metodologias de diseño software corresponding to the third course
