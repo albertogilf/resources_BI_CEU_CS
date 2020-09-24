@@ -1,0 +1,6 @@
+reference,name,birthdate,weight,gender,temperature,description,chromosome1,chromosome2
+1,raton1,2020-03-12,58.0,FEMALE,36.9,description1,X,X
+2,raton2,2020-03-09,73.0,FEMALE,36.4,description2,X,Y
+3,raton3,2020-02-10,23.0,FEMALE,37.4,description3,X_MUTATED,X_MUTATED
+4,raton4,2020-01-12,21.0,MALE,36.7,description4,X,Y_MUTATED
+5,raton5,2020-02-15,32.0,MALE,36.5,description5,X_MUTATED,Y_MUTATED
