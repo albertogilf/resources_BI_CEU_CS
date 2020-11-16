@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>trabajos.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///media/alf/datos/apps/css/ceu.css" type="text/css">
+</head>
+<body>
+<h1 id="trabajos-de-fundamentos-de-computaci%C3%B3n-2018-2019">Trabajos de Fundamentos de Computación 2018-2019</h1>
+<p>Los trabajos se realizarán en grupos de cuatro alumnos.</p>
+<p>Cada grupo debe elegir un trabajo y comunicárselo lo antes posible al profesor al correo (asalber@ceu.es).</p>
+<p>Cada trabajo podrá ser elegido por un máximo de 3 grupos que se asignarán por riguroso orden de llegada de los correos.</p>
+<h3 id="requisitos-generales">Requisitos generales</h3>
+<ul>
+<li>Los alumnos deben dividirse el trabajo haciendo un reparto lo más equitativo posible y decidir quién se encarga de cada tarea. El reparto del trabajo debe quedar reflejado en una memoria.</li>
+<li>Todas las funciones deben documentarse y se valorará también la documentación del código.</li>
+<li>Se valorará también la elegancia y la sencillez del código.</li>
+<li>El proyecto final debe subirse a un repositorio privado de GitHub en el que deben colaborar los cuatro alumnos. Los alumnos trabajarán en ramas diferentes que se fusionarán para integrar el trabajo realizado.</li>
+<li>Cada grupo hará una defensa del trabajo donde se mostrará que el trabajo cumple los requisitos especificados y donde cada alumno dará explicaciones sobre la parte del desarrollo de la que se ha encargado.</li>
+</ul>
+<h3 id="entrega-del-trabajo">Entrega del trabajo</h3>
+<p>La fecha límite de entrega será el 20 de mayo y la defensa del trabajo el 23 de mayo.</p>
+<p>La entrega del trabajo ser realizará simplemente compartiendo el repositorio de GitHub que albergue el trabajo con los usuarios <code>asalberceu</code> y <code>pabloares</code>.</p>
+<p>A continuación se indican los pasos para generar el repositorio en Github:</p>
+<ol>
+<li>Crear una cuenta compartida para todos los alumnos del grupo en Github.</li>
+<li>Crear un nuevo repositorio con el nombre trabajo-final, hacerlo privado y compartirlo con los usuarios <code>asalberceu</code> y <code>pabloares</code>.</li>
+<li>Cada alumno en su ordenador debe clonar el repositorio. ¡Atención! Al ser un repositorio privado para hacer el clone hay que poner el nombre de usuario y la contraseña de la cuenta de Github en la url del respositorio. Por ejemplo si la url del repositorio es <code>https://github.com/asalberceu/trabajo-final.git</code>, para clonarlo hay que utilizar la orden<pre class="hljs"><code><div>&gt; git clone https://usuario:contraseña@github.com/asalberceu/trabajo-final.git
+</div></code></pre>
+donde <code>usuario</code> y <code>contraseña</code> son el nombre de usuario y contraseña de la cuenta compartida de Github.</li>
+<li>Cada alumno en su copia del repositorio local debe crear una rama con su propio nombre y activarla.<pre class="hljs"><code><div>&gt; git checkout -b nombre
+</div></code></pre>
+donde <code>nombre</code> es el nombre del alumno.</li>
+<li>Cada alumno creará las funciones que le toque programar en un fichero con su nombre. Cuando haya terminado deberá subirlo a Github.</li>
+<li>Cuando todos los alumnos del grupo hayan subido su trabajo, uno de ellos (esto solo debe hacerlo un miembro del grupo) actualizará su repositorio para incorporar el trabajo de los demás.<pre class="hljs"><code><div>&gt; git pull
+</div></code></pre>
+y después fusionará todas las ramas en la rama master (hay que hacerlo rama a rama).<pre class="hljs"><code><div>&gt; git checkout master
+&gt; git merge rama
+</div></code></pre>
+</li>
+<li>Añadir un nuevo fichero con el nombre <code>main.py</code> donde se importen los módulos de cada alumno y se hagan llamadas a las funciones que contienen para demostrar que funcionan.</li>
+<li>Hacer el commit y subir los últimos cambios al repositorio de Github antes del 20 de Mayo a las 24:00.</li>
+</ol>
+<h3 id="recomendaciones">Recomendaciones</h3>
+<p>Usar los módulos <a href="https://pandas.pydata.org/">pandas</a> y <a href="https://matplotlib.org/index.html">matplotlib</a>.</p>
+<h2 id="trabajo-1-madrid-central">Trabajo 1: Madrid central</h2>
+<p>El objetivo de este trabajo es comprobar si las restricciones de tráfico establecidas en Madrid Central han servido para reducir significativamente las emisiones de gases contaminantes.</p>
+<h3 id="conjunto-de-datos">Conjunto de datos</h3>
+<p>Datos abiertos del Ayuntamiento de Madrid: <a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=aecb88a7e2b73410VgnVCM2000000c205a0aRCRD&amp;vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&amp;vgnextfmt=default" target="_blank">Calidad del aire. Datos diarios años 2001 a 2019</a>.</p>
+<p>Deben usarse al menos los datos de 2018 y 2019.</p>
+<h3 id="requisitos-obligatorios">Requisitos obligatorios</h3>
+<ul>
+<li>Crear una función que reciba una estación de medición y una magnitud y devuelva una lista con todas las mediciones de la magnitud en la estación.</li>
+<li>Crear una función que reciba un mes y una estación de medición y devuelva un diccionario con las medias de las magnitudes medidas por la estación durante ese mes.</li>
+<li>Crear una función que reciba un mes y una magnitud y devuelva un diccionario con las medias de las estaciones de medición de la magnitud durante ese mes.</li>
+<li>Crear una función que reciba un rango de fechas y una estación de medición y genere un gráfico con la evolución diaria de las magnitudes de esa estación en las fechas indicadas.</li>
+<li>Crear una función que reciba un rango de fechas y una magnitud y genere un gráfico con la evolución diaria de la magnitud para cada estación de medición en las fechas indicadas.</li>
+<li>Crear una función que reciba una magnitud y genere un gráfico con las medias mensuales para cada estación de medición.</li>
+</ul>
+<h3 id="requisitos-opcionales">Requisitos opcionales</h3>
+<ul>
+<li>Crear una función que reciba un mes y una magnitud y devuelva un diccionario con las medias de la magnitud dentro de Madrid Central y fuera de ella.</li>
+<li>Crear una función que reciba una magnitud y genere un gráfico con las medias mensuales dentro de Madrid Central y fuera de ella.</li>
+</ul>
+<h2 id="trabajo-2-contratos-menores">Trabajo 2: Contratos menores</h2>
+<p>El objetivo de este trabajo es hacer un análisis de los contratos menores del Ayuntamiento de Madrid desde 2015 para hacer una comparativa por años y ver qué empresas han resultado más beneficiadas.</p>
+<h3 id="conjunto-de-datos">Conjunto de datos</h3>
+<p>Datos abiertos del Ayuntamiento de Madrid: <a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=c331ef300ebe5610VgnVCM1000001d4a900aRCRD&amp;vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&amp;vgnextfmt=default" target="_blank">Contratos menores</a>.</p>
+<p>Deben usarse los datos desde 2015.</p>
+<h3 id="requisitos-obligatorios">Requisitos obligatorios</h3>
+<ul>
+<li>Crear una función que reciba una empresa y una lista de años y devuelva un diccionario con el número de contratos y el total facturado por la empresa esos años.</li>
+<li>Crear una función que reciba una sección y una lista de años y devuelva un diccionario con el número de contratos y el total facturado a la sección esos años.</li>
+<li>Crear una función que reciba una empresa, una sección y una lista de años y devuelva un diccionario con el número de contratos y el total facturado por la empresa a la sección esos años.</li>
+<li>Crear una función que reciba una rango de años y un número entero n e imprima la lista de las n empresas que más han facturado durante esos años ordenadas de mayor a menor facturación y genere un gráfico con esa información.</li>
+<li>Crear una función reciba una rango de años y un número entero n y genere un gráfico con la evolución anual del total facturado por las n empresas que más han facturado.</li>
+<li>Crear una función reciba una rango de años y genere un gráfico con la evolución anual del total facturado a las secciones.</li>
+</ul>
+<h3 id="trabajo-3-ejecuci%C3%B3n-del-presupuesto-de-inversiones">Trabajo 3: Ejecución del presupuesto de inversiones</h3>
+<p>El objetivo de este trabajo es hacer un análisis de las inversiones realizadas por el Ayuntamiento de Madrid para hacer una comparativa por años y distritos.</p>
+<h3 id="conjunto-de-datos">Conjunto de datos</h3>
+<p>Datos abiertos del Ayuntamiento de Madrid: <a href="https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=b404f67f5b35b410VgnVCM2000000c205a0aRCRD&amp;vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&amp;vgnextfmt=default" target="_blank">Presupuestos. Históricos ejecución 2011-2017</a>.</p>
+<p>Deben usarse al menos los datos desde 2014.</p>
+<h3 id="requisitos-obligatorios">Requisitos obligatorios</h3>
+<ul>
+<li>Crear una función que reciba un distrito y una lista de años y devuelva un diccionario con el número de inversiones y el total de estas en el distrito esos años.</li>
+<li>Crear una función que reciba una línea de inversión y una lista de años y devuelva un diccionario con el número de inversiones y el total de estas en la línea de inversión esos años.</li>
+<li>Crear una función que reciba un distrito, una línea de inversión y una lista de años y devuelva un diccionario con el número de inversiones y el total de estas en la línea de inversión y el distrito esos años.</li>
+<li>Crear una función que reciba una rango de años y genere un gráfico con la evolución del total anual de las inversiones por distritos.</li>
+<li>Crear una función que reciba una rango de años y genere un gráfico con la evolución del total anual de las inversiones por líneas de inversión.</li>
+<li>Crear una función que reciba una rango de años y genere un gráfico con la evolución del total anual de las inversiones per cápita por distritos.</li>
+</ul>
+<h3 id="requisitos-opcionales">Requisitos opcionales</h3>
+<ul>
+<li>Crear una función que reciba una lista de años, un distrito y una cantidad n, y devuelva un diccionario con el número de modificaciones presupuestarias superiores a la cantidad n y el total de estas.</li>
+</ul>
+
+</body>
+</html>

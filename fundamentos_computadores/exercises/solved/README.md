@@ -1,0 +1,1 @@
+[Ejercicios resueltos con Python](https://aprendeconalf.es/docencia/python/ejercicios/)

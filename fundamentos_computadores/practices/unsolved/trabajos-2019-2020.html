@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Trabajos de Fundamentos de Computación 2019-2020</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="trabajos-de-fundamentos-de-computaci%c3%b3n-2019-2020">Trabajos de Fundamentos de Computación 2019-2020</h1>
+<p>Los trabajos se realizarán en grupos de máximo cuatro alumnos.</p>
+<p>Cada grupo debe elegir un trabajo y comunicárselo lo antes posible al profesor al correo (<a href="mailto:asalber@ceu.es">asalber@ceu.es</a>).</p>
+<p>Cada trabajo podrá ser elegido por un máximo de 2 grupos que se asignarán por riguroso orden de llegada de los correos.</p>
+<h3 id="requisitos-generales">Requisitos generales</h3>
+<ul>
+<li>Los alumnos deben dividirse el trabajo haciendo un reparto lo más equitativo posible y decidir quién se encarga de cada tarea. El reparto del trabajo debe quedar reflejado en una memoria.</li>
+<li>Todas las funciones deben documentarse y se valorará también la documentación del código.</li>
+<li>Se valorará también la elegancia y la sencillez del código.</li>
+<li>El proyecto final debe subirse a un repositorio privado de GitHub en el que deben colaborar los cuatro alumnos. Los alumnos trabajarán en ramas diferentes que se fusionarán para integrar el trabajo realizado.</li>
+<li>Cada grupo hará una defensa del trabajo donde se mostrará que el trabajo cumple los requisitos especificados y donde cada alumno dará explicaciones sobre la parte del desarrollo de la que se ha encargado.</li>
+</ul>
+<h3 id="entrega-del-trabajo">Entrega del trabajo</h3>
+<p>La fecha límite de entrega será el 18 de mayo y la defensa del trabajo el 20 de mayo.</p>
+<p>La entrega del trabajo ser realizará simplemente compartiendo el repositorio de GitHub que albergue el trabajo con los usuarios <code>asalberceu</code> y <code>pabloares</code>.</p>
+<p>A continuación se indican los pasos para generar el repositorio en Github:</p>
+<ol>
+<li>Crear una cuenta compartida para todos los alumnos del grupo en Github.</li>
+<li>Crear un nuevo repositorio con el nombre trabajo-final, hacerlo privado y compartirlo con los usuarios <code>asalberceu</code> y <code>pabloares</code>.</li>
+<li>Cada alumno en su ordenador debe clonar el repositorio. ¡Atención! Al ser un repositorio privado para hacer el clone hay que poner el nombre de usuario y la contraseña de la cuenta de Github en la url del respositorio. Por ejemplo si la url del repositorio es <code>https://github.com/asalberceu/trabajo-final.git</code>, para clonarlo hay que utilizar la orden<pre><code><code><div>&gt; git clone https://usuario:contraseña@github.com/asalberceu/trabajo-final.git
+</div></code></code></pre>
+donde <code>usuario</code> y <code>contraseña</code> son el nombre de usuario y contraseña de la cuenta compartida de Github.</li>
+<li>Cada alumno en su copia del repositorio local debe crear una rama con su propio nombre y activarla.<pre><code><code><div>&gt; git checkout -b nombre
+</div></code></code></pre>
+donde <code>nombre</code> es el nombre del alumno.</li>
+<li>Cada alumno creará las funciones que le toque programar en un fichero con su nombre. Cuando haya terminado deberá subirlo a Github.</li>
+<li>Cuando todos los alumnos del grupo hayan subido su trabajo, uno de ellos (esto solo debe hacerlo un miembro del grupo) actualizará su repositorio para incorporar el trabajo de los demás.<pre><code><code><div>&gt; git pull
+</div></code></code></pre>
+y después fusionará todas las ramas en la rama master (hay que hacerlo rama a rama).<pre><code><code><div>&gt; git checkout master
+&gt; git merge rama
+</div></code></code></pre>
+</li>
+<li>Añadir un nuevo fichero con el nombre <code>main.py</code> donde se importen los módulos de cada alumno y se hagan llamadas a las funciones que contienen para demostrar que funcionan.</li>
+<li>Hacer el commit y subir los últimos cambios al repositorio de Github antes del 18 de Mayo a las 24:00.</li>
+</ol>
+<h3 id="recomendaciones">Recomendaciones</h3>
+<p>Usar los módulos <a href="https://pandas.pydata.org/">pandas</a> y <a href="https://matplotlib.org/index.html">matplotlib</a>.</p>
+<h2 id="trabajo-1-madrid-airbnb-1">Trabajo 1: Madrid Airbnb 1</h2>
+<p>El objetivo de este trabajo es comprobar si se está utilizando la plataforma Airbnb por parte de empresas, en lugar de particulares, para alquiler turístico en el centro de Madrid.</p>
+<h3 id="conjunto-de-datos">Conjunto de datos</h3>
+<p>Datos abiertos de Inside Airbnb: <a href="http://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2020-03-17/data/listings.csv.gz" target="_blank">Fichero alojamientos detallado</a>.</p>
+<h3 id="requisitos-obligatorios">Requisitos obligatorios</h3>
+<p>Sin usar Pandas:</p>
+<ol>
+<li>Extraer del fichero de alojamientos una lista con todos los alojamientos, donde cada alojamiento sea un diccionario que contenga el identificador del alojamiento, el identificador del anfitrión, el distrito, el precio y las plazas.</li>
+<li>Crear una función que reciba la lista de alojamientos y devuelva el número de alojamientos en cada distrito.</li>
+<li>Crear una función que reciba la lista de alojamientos y un número de ocupantes y devuelva la lista de alojamientos con un número de plazas mayor o igual que el número de ocupantes.</li>
+<li>Crear una función que reciba la lista de alojamientos un distrito, y devuelva los 10 alojamientos más baratos del distrito.</li>
+<li>Crear una función que reciba la lista de alojamientos y devuelva un diccionario con los anfitriones y el número de alojamientos que posee cada uno.</li>
+</ol>
+<p>Usando Pandas:</p>
+<ol start="6">
+<li>Preprocesar el fichero de alojamientos para crear un data frame con las variables id, host_id, listing_url, room_type, neighbourhood_group_cleansed, price, cleaning_fee, accommodates, minimum_nights, minimum_cost, review_scores_rating, latitude, longitude, is_location_exact. Eliminar del data frame cualquier fila incompleta. Añadir al data frame nuevas variables con el coste mínimo por noche y por persona (que incluya los gastos de limpieza), y el número de servicios que ofrece el alojamiento.</li>
+<li>Crear una función que reciba una lista de distritos y devuelva un diccionario con los tipos de alojamiento en ese distrito y el porcentaje de alojamientos de ese tipo.</li>
+<li>Crear una función que reciba una lista de distritos y devuelva un diccionario con el número de alojamientos que cada anfitrión ofrece en esos distrito, ordenado de más a menos alojamientos.</li>
+<li>Crear una función que reciba devuelva un diccionario con el número medio de alojamientos por anfitrión de cada distrito.</li>
+<li>Crear una función que reciba una lista de distritos y dibuje un diagrama de sectores con los porcentajes de tipos de alojamientos en esos distritos.</li>
+<li>Crear una función que dibuje un diagrama de barras con el número de alojamientos por distritos.</li>
+<li>Crear una función que dibuje un diagrama de barras con los porcentajes acumulados de tipos de alojamientos por distritos.</li>
+<li>Crear una función reciba una lista de distritos y una lista de tipos de alojamientos, y dibuje un diagrama de sectores con la distribución del número de alojamientos de ese tipo por anfitrión.</li>
+<li>Crear una función que dibuje un diagrama de barras con los precios medios por persona y día de cada distrito.</li>
+</ol>
+<h3 id="requisitos-opcionales">Requisitos opcionales</h3>
+<ol start="15">
+<li>Crear una función que reciba una lista de distritos y dibuje un gráfico de dispersión con el coste mínimo por noche y persona y la puntuación en esos distritos.</li>
+<li>Crear una función que reciba una lista de distritos y dibuje dos histogramas con la distribución de precios por persona y día, uno para los alojamientos con título en inglés y otro para los alojamientos con títulos en español. Si la distribución es muy asimétrica, aplicar una transformación logarítmica. ¿Hay diferencias entre los precios de los alojamientos en inglés y el español?
+Nota: Para identificar el idioma puede usare el módulo <code>langdetect</code>.</li>
+</ol>
+<h2 id="trabajo-2-madrid-airbnb-2">Trabajo 2: Madrid Airbnb 2</h2>
+<p>El objetivo de este trabajo es hacer una análisis de la tipología de huéspedes que se alojan en los alojamientos que ofrece la plataforma Airbnb en Madrid.</p>
+<h3 id="conjunto-de-datos-1">Conjunto de datos</h3>
+<p>Datos abiertos de Inside Airbnb: <a href="http://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2020-03-17/data/listings.csv.gz" target="_blank">Fichero alojamientos detallado</a> y <a href="http://data.insideairbnb.com/spain/comunidad-de-madrid/madrid/2020-03-17/data/reviews.csv.gz" target="_blank">Fichero valoraciones detallado</a></p>
+<h3 id="requisitos-obligatorios-1">Requisitos obligatorios</h3>
+<p>Sin usar Pandas:</p>
+<ol>
+<li>Extraer del fichero de alojamientos una lista con todos los alojamientos, donde cada alojamiento sea un diccionario que contenga el identificador del alojamiento, el identificador del anfitrión, el distrito, los servicios y la puntuación global.</li>
+<li>Crear una función que reciba la lista de alojamientos y un distrito, y devuelva los 10 alojamientos mejor valorados del distrito.</li>
+<li>Crear una función que reciba la lista de alojamientos y un servicio (wifi, lavavajillas, etc.) y devuelva otra lista con los alojamientos que disponen de ese servicio.</li>
+<li>Extraer del fichero de valoraciones una lista con todas las valoraciones, donde cada valoración sea un diccionario que contenga el identificador del alojamiento, la fecha de la valoración y la valoración.</li>
+<li>Crear una función que reciba una lista de valoraciones y un rango de fechas y devuelva otra lista con las valoraciones realizadas en el rango de fechas.</li>
+<li>Crear una función que reciba una lista de valoraciones y el identificador de un alojamiento y devuelva la lista de valoraciones de ese alojamiento.</li>
+</ol>
+<p>Usando Pandas:</p>
+<ol start="7">
+<li>Preprocesar los ficheros de alojamientos y valoraciones para obtener un data frame que contenga el identificador del alojamiento, el identificador del anfitrión, el distrito, el tipo de alojamiento, el número de plazas, la puntuación global, la fecha de la valoración. A partir del número de plazas definir una nueva variable con las categorías de usuarios Individual (1 plaza), Pareja (2 plazas), Familia (de 3 a 4 plazas), Grupo (más de 4 plazas).</li>
+<li>Crear una función que reciba una lista de distritos y devuelva un diccionario con el número de valoraciones para cada tipo de alojamiento en esos distritos.</li>
+<li>Crear una función que reciba una lista de distritos y devuelva un diccionario con el número de valoraciones para cada tipo de categoría de usuarios en esos distritos.</li>
+<li>Crear una función que reciba una lista de distritos y un año, y devuelva un diccionario con el número de valoraciones para cada mes de ese año en esos distritos.</li>
+<li>Crear una función que reciba una lista de distritos y dibuje un diagrama de sectores con el número de alojamientos para cada categoría de usuarios en esos distritos.</li>
+<li>Crear una función que reciba una lista de distritos y un rango de fechas, y dibuje un diagrama de líneas con la evolución del número de valoraciones en esos distritos en ese rango de fechas.</li>
+<li>Crear una función que reciba un rango de años y dibuje un diagrama de barras con el número de valoraciones por tipo de alojamiento para cada año del rango indicado.</li>
+<li>Crear una función que reciba una lista de distritos y un año, y dibuje un diagrama de líneas con la evolución del número de valoraciones mensuales en ese año y esos distritos para cada categoría de usuarios (una línea por categoría de usuarios).</li>
+</ol>
+<h3 id="requisitos-opcionales-1">Requisitos opcionales</h3>
+<ol start="15">
+<li>Crear una función que reciba una lista de distritos y dibuje un diagrama de cajas de las valoraciones mensuales (una caja por mes) en esos distritos. ¿Hay estacionalidad en la ocupación de alojamientos?</li>
+<li>Crear una función que reciba una lista de distritos y dibuje un diagrama de cajas de las valoraciones medias mensuales según la categoría de usuarios (una caja por mes y categoría de usuarios) en esos distritos. ¿Hay estacionalidad en la ocupación de alojamientos según la categoría de usuarios?</li>
+</ol>
+<h2 id="trabajo-3-deuda">Trabajo 3: Deuda</h2>
+<p>El objetivo de este trabajo es hacer un análisis del endeudamiento público por países.</p>
+<h3 id="conjunto-de-datos-2">Conjunto de datos</h3>
+<p>Datos del banco mundial: Ver ficheros adjuntos de Deuda pública y PIB.</p>
+<h3 id="requisitos-obligatorios-2">Requisitos obligatorios</h3>
+<p>Sin usar Pandas:</p>
+<ol>
+<li>Crear una función que reciba un país y un tipo de deuda y devuelva un diccionario con todos los periodos y la cantidad de deuda en esos periodos de ese país y tipo de deuda.</li>
+<li>Crear una función que reciba un país y un tipo de deuda y devuelva un diccionario con el mínimo y el máximo de deuda de ese tipo para ese país.</li>
+<li>Crear una función que reciba un país y un año, y devuelva un diccionario con la deuda interna y la deuda externa de ese país en ese año.</li>
+<li>Crear una función que reciba un país y un año, y devuelva un diccionario con la deuda en moneda local y la deuda en moneda extranjera de ese país en ese año.</li>
+</ol>
+<p>Usando Pandas:</p>
+<ol start="5">
+<li>Preprocesar el fichero de deuda pública para obtener un data frame con el país, el tipo de deuda, la fecha y la cantidad de deuda.</li>
+<li>Crear una función que reciba un país y una fecha y devuelva un diccionario con la deuda total interna, externa, en moneda local, en moneda extranjera, a corto plazo y a largo plazo, de ese país en esa fecha.</li>
+<li>Crear una función que reciba un tipo de deuda y una fecha, y devuelva un diccionario con la deuda de ese tipo de todos los países.</li>
+<li>Crear una función que reciba un país y una fecha y devuelva un diagrama de sectores con la deuda interna y la deuda externa de ese país en esa fecha.</li>
+<li>Crear una función que reciba un país y una fecha, y dibuje un diagrama de barras con las cantidades de los distintos tipos de deudas de ese país en esa fecha.</li>
+<li>Crear una función que reciba una lista de países y un tipo de deuda y dibuje un diagrama de líneas con la evolución de ese tipo de deuda de esos países (una línea por país).</li>
+<li>Crear una función que reciba un país y una lista de tipos de deuda y dibuje un diagrama de líneas con la evolución de esos tipos de deuda de ese país (una línea por tipo de deuda).</li>
+<li>Crear una función que reciba una lista de países y una lista de tipos de deuda, y dibuje un diagrama de cajas con las deudas de esos tipos de esos países (una caja por país y tipo de deuda).</li>
+</ol>
+<h3 id="requisitos-opcionales-2">Requisitos opcionales</h3>
+<ol start="13">
+<li>Preprocesar el fichero del PIB crear un data frame con el país, la fecha y el PIB.</li>
+<li>Crear una función que reciba un país y dibuje la evolución de la deuda pública total como porcentaje del PIB.</li>
+<li>Crear una función que reciba un país devuelva un diccionario con los años y si el endeudamiento en esa fecha era insostenible. Se considera un endeudamiento insostenible si durante los tres años anteriores el porcentaje de deuda pública con respecto al PIB es superior al 20%.</li>
+</ol>
+
+    </body>
+    </html>
